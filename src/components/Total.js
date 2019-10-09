@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 const Total = props => {
+  console.log(props);
   const { state } = props;
   // debugger
   return (

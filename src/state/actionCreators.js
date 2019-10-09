@@ -1,10 +1,20 @@
 import * as types from './actionTypes';
 
+// export const removeFeature = item => {
+//   return {
+//     type: types.REMOVE_FEATURE
+//   };
+//   // dispatch an action here to remove an item
+// };
+
 export const removeFeature = item => {
   return {
-    type: types.REMOVE_FEATURE
-  };
-  // dispatch an action here to remove an item
+      type: types.REMOVE_FEATURE,
+      payload: {
+          id: item.id,
+          price: item.price
+      }
+  }
 };
 
 export const buyItem = item => {
