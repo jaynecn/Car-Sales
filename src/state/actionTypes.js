@@ -1,4 +1,3 @@
 
-export const ON_CLICK = 'ON_CLICK';
-export const CAR_INFO = 'CAR_INFO';
-export const REMOVE = 'REMOVE';
+export const ADD_FEATURE = 'ADD_FEATURE';
+export const REMOVE_FEATURE = 'REMOVE_FEATURE';
