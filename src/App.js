@@ -5,21 +5,10 @@ import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 import { ReactDOM } from 'react-dom';
 import { connect } from 'react-redux';
-import * as types from './state/actionCreators';
+import * as actionCreators from './state/actionCreators';
 
 const App = (props) => {
-  const {buyitem, car, shop} = props;
-
-  // const monsterReducer = combineReducers({
-  //   car: reducers.carReducer,
-  //   shop: reducers.storeReducer,
-  // });
-
-  // const store = createStore(
-  //   monsterReducer,
-  //   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  // );
-  
+  const {car, shop} = props;
 
   const removeFeature = item => {
     // dispatch an action here to remove an item

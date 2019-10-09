@@ -1,4 +1,6 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import * as actionCreators from '../state/actionCreators';
 
 const Header = props => {
   return (
@@ -12,4 +14,8 @@ const Header = props => {
   );
 };
 
-export default Header;
+export default connect(
+  // callback that takes state and returns it (mapStateToProps)
+  state => state, // we get all slices of state through props (8)
+  actionCreators, // we get all action creators through props (9)
+)(Header);
