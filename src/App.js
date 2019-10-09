@@ -4,12 +4,12 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 import { ReactDOM } from 'react-dom';
-import { connect } from 'react-redux';
 import * as reducers from './state/reducers';
 import { combineReducers, createStore } from 'redux';
+import { Provider } from 'react-redux';
 
 const monsterReducer = combineReducers({
-  car: reducers.carReducer,
+  state: reducers.carReducer,
 });
 
 const store = createStore(
@@ -45,10 +45,5 @@ const App = (props) => {
   );
 };
 
-// export default App;
 
-export default connect(
-  // callback that takes state and returns it (mapStateToProps)
-  state => state, // we get all slices of state through props (8)
-  actionCreators, // we get all action creators through props (9)
-)(App);
+export default App;
